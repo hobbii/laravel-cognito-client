@@ -18,7 +18,7 @@ class CognitoClientServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->app->singleton(CognitoClient::class, function (Application $app) {
+        $this->app->bind('cognito', function (Application $app) {
             return CognitoClient::init(
                 $app['config']['hobbii-cognito.key'],
                 $app['config']['hobbii-cognito.secret'],

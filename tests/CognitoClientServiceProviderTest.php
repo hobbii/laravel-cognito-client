@@ -4,6 +4,7 @@ namespace Tests;
 
 use Hobbii\CognitoClient\CognitoClient;
 use Hobbii\LaravelCognitoClient\CognitoClientServiceProvider;
+use Hobbii\LaravelCognitoClient\Facades\Cognito;
 use Orchestra\Testbench\TestCase;
 
 class CognitoClientServiceProviderTest extends TestCase
@@ -15,8 +16,15 @@ class CognitoClientServiceProviderTest extends TestCase
         ];
     }
 
+    protected function getPackageAliases($app)
+    {
+        return [
+            'Cognito' => Cognito::class,
+        ];
+    }
+
     public function testCognitoClientIsAddedAsSingleton(): void
     {
-        $this->assertInstanceOf(CognitoClient::class, $this->app->make(CognitoClient::class));
+        $this->assertInstanceOf(CognitoClient::class, Cognito::getFacadeRoot());
     }
 }

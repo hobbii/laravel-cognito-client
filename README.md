@@ -26,13 +26,13 @@ Use the `hobbii`-driver with socialite:
 <?php
 
 use Illuminate\Http\Request;
-use Hobbii\CognitoClient\CognitoClient;
+use Hobbii\LaravelCognitoClient\Facades\Cognito;
 
 class AuthController extends Controller
 {
     public function login(Request $request)
     {
-        $authSession = app(CognitoClient::class)->authenticate($request->email, $request->password);
+        $authSession = Cognito::authenticate($request->email, $request->password);
         
         if ($authSession->success()) {
             return redirect()->route('dashboard');

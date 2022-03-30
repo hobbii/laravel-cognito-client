@@ -28,7 +28,10 @@
       "laravel": {
         "providers": [
           "Hobbii\\LaravelCognitoClient\\CognitoClientServiceProvider"
-        ]
+        ],
+        "aliases": {
+          "Cognito": "Hobbii\\LaravelCognitoClient\\Facades\\Cognito"
+        }
       }
     }
 }
