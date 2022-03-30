@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        bootstrap="vendor/autoload.php"
+        colors="true"
+        verbose="true"
+        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+>
+    <coverage>
+        <include>
+            <directory suffix=".php">src/</directory>
+        </include>
+    </coverage>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="AWS_ACCESS_KEY_ID" value="AKIAIOSFODNN7EXAMPLE" />
+        <env name="AWS_SECRET_ACCESS_KEY" value="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY" />
+        <env name="AWS_DEFAULT_REGION" value="us-west-1" />
+        <env name="COGNITO_APP_CLIENT_ID" value="12a34bcde5fgh7ij8kl90mn12o" />
+        <env name="COGNITO_APP_CLIENT_SECRET" value="12abc3defghi56789jklmnopqrstu012vwxyzabcd34efg56hi7" />
+        <env name="COGNITO_USER_POOL_ID" value="us-west-1_aB12CD34e" />
+    </php>
+</phpunit>

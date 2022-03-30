@@ -1,0 +1,34 @@
+{
+    "name": "hobbii/laravel-cognito-client",
+    "description": "A Laravel wrapper for hobbii/cognito-client",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4|^8.0",
+        "hobbii/cognito-client": "^1.0",
+        "illuminate/support": "^8.83"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.5",
+        "phpunit/phpunit": "^9.5",
+        "fakerphp/faker": "^1.19",
+        "orchestra/testbench": "^6.24"
+    },
+    "autoload": {
+      "psr-4": {
+        "Hobbii\\LaravelCognitoClient\\": "src/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "Tests\\": "tests/"
+      }
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "Hobbii\\LaravelCognitoClient\\CognitoClientServiceProvider"
+        ]
+      }
+    }
+}
