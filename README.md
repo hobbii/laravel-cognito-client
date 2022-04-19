@@ -1,8 +1,10 @@
 # Hobbii Laravel Cognito Client
 [![codecov](https://codecov.io/gh/hobbii/laravel-cognito-client/branch/main/graph/badge.svg?token=ROhuwlDZQs)](https://codecov.io/gh/hobbii/laravel-cognito-client)
+[![Total Downloads](https://img.shields.io/packagist/dt/hobbii/laravel-cognito-client)](https://packagist.org/packages/hobbii/laravel-cognito-client)
+[![Latest Version](https://img.shields.io/packagist/v/laravel-hobbii/cognito-client)](https://packagist.org/packages/hobbii/laravel-cognito-client)
 ![CI Workflow](https://github.com/hobbii/laravel-cognito-client/actions/workflows/ci.yml/badge.svg?branch=main)
 
-A Cognito Client for [Laravel](https://laravel.com/) using [hobbii/cognito-client](https://github.com/hobbii/cognito-client)
+A public composer pacakge, adding a Cognito Client for [Laravel](https://laravel.com/) using [hobbii/cognito-client](https://github.com/hobbii/cognito-client)
 
 ```shell
 composer require hobbii/laravel-cognito-client
